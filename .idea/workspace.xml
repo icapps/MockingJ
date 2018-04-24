@@ -501,7 +501,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestMockServer.testUrlMatching">
+  <component name="RunManager" selected="JUnit.TestMockServer">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -671,8 +671,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestMockServer.testUrlMatching" />
         <item itemvalue="JUnit.TestMockServer" />
+        <item itemvalue="JUnit.TestMockServer.testUrlMatching" />
         <item itemvalue="JUnit.TestMockServer.testMethodMatching" />
         <item itemvalue="JUnit.TestMockServer.test" />
       </list>
