@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cec2cb1-6dcd-4c05-9452-44185ef74f58" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.gradle/4.4/fileChanges/last-build.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.4/fileContent/fileContent.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/ourjsonmockisbetter_main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/ourjsonmockisbetter_test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/kotlin-build/version.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/libs/ourjsonmockisbetter-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/com/icapps/ourjsonmockisbetter/JsonMock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/com/icapps/ourjsonmockisbetter/JsonMockDispatcher.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/classes/users/GET_1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/test/classes/TestMockServer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/test/classes/users/GET_1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/JsonMock.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/JsonMockDispatcher.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/GET_users.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/users/GET_1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/users/GET_2.json.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/users/POST_1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/TestMockServer.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/GET_users.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/users/GET_1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/users/GET_2.json.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/users/POST_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestMockServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestMockServer.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -80,8 +44,8 @@
       <file leaf-file-name="TestMockServer.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/kotlin/TestMockServer.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+            <state relative-caret-position="606">
+              <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
               <folding>
                 <element signature="e#0#115#0" expanded="true" />
               </folding>
@@ -399,8 +363,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/users/GET_1.json" />
         <option value="$PROJECT_DIR$/src/test/resources/users/GET_1.json" />
         <option value="$PROJECT_DIR$/src/main/resources/users/POST_1.json" />
-        <option value="$PROJECT_DIR$/src/test/kotlin/TestMockServer.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/test/kotlin/TestMockServer.kt" />
       </list>
     </option>
   </component>
@@ -537,7 +501,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestMockServer.testMethodMatching">
+  <component name="RunManager" selected="JUnit.TestMockServer.testUrlMatching">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -707,10 +671,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestMockServer.testMethodMatching" />
         <item itemvalue="JUnit.TestMockServer.testUrlMatching" />
-        <item itemvalue="JUnit.TestMockServer.test" />
         <item itemvalue="JUnit.TestMockServer" />
+        <item itemvalue="JUnit.TestMockServer.testMethodMatching" />
+        <item itemvalue="JUnit.TestMockServer.test" />
       </list>
     </recent_temporary>
   </component>
@@ -771,9 +735,9 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005325" side_tool="true" weight="0.32996973" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20222634" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20222634" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32962275" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32962275" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32962275" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16149697" />
@@ -957,8 +921,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/TestMockServer.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        <state relative-caret-position="606">
+          <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
           <folding>
             <element signature="e#0#115#0" expanded="true" />
           </folding>
@@ -1045,7 +1009,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Gradle: com.squareup.okhttp3:mockwebserver:3.10.0</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>

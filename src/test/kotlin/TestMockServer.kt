@@ -30,6 +30,7 @@ class TestMockServer {
         val url1 = "${baseUrl}users"
         val url2 = "${baseUrl}users/1"
         val url3 = "${baseUrl}users/2.json"
+        val url4 = "${baseUrl}users/1?query=param"
 
         fun getResponse(url: String): String {
             val response = okHttp.newCall(Request.Builder()
@@ -38,9 +39,9 @@ class TestMockServer {
                     .build()).execute()
 
             val body = response.body()?.string()
-            if (body == null) {
-                fail()
-                throw IllegalStateException("No body received for url $url")
+            if (!response.isSuccessful || body == null) {
+                fail("No body received or not successful for url $url")
+                throw IllegalStateException()
             } else {
                 return body
             }
@@ -52,9 +53,14 @@ class TestMockServer {
 
         val body2 = getResponse(url2)
         assert(body2.contains("Van Giel"))
+        assert(!body2.contains("Van Looveren"))
 
         val body3 = getResponse(url3)
         assert(body3.contains("Verbeeck"))
+
+        val body4 = getResponse(url4)
+        assert(body4.contains("Van Giel"))
+        assert(!body4.contains("Van Looveren"))
     }
 
     @Test
