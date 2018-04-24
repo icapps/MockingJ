@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cec2cb1-6dcd-4c05-9452-44185ef74f58" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/ResourceUtils.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/responses/users/GET_*.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/responses/users/GET_1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/responses/users/GET_3*.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/icapps/ourjsonmockisbetter/JsonMock.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/icapps/ourjsonmockisbetter/JsonMock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/icapps/ourjsonmockisbetter/JsonMockDispatcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/icapps/ourjsonmockisbetter/JsonMockDispatcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/GET_users.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/TestMockServer$testMethodMatching$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/TestMockServer$testMethodMatching$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/TestMockServer$testUrlMatching$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/TestMockServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/TestMockServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/users/GET_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/users/GET_1?query=param.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/users/GET_2.json.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/users/POST_1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/JsonMockDispatcher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/JsonMockDispatcher.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/TestMockServer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/TestMockServer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/GET_users.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/responses/GET_users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/users/GET_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/responses/users/DELETE_1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/users/GET_1?query=param.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/responses/users/GET_1?query=param.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/users/GET_2.json.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/responses/users/GET_2.json.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/users/POST_1.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/responses/users/POST_1.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -40,24 +61,12 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="TestMockServer.kt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/kotlin/TestMockServer.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="606">
-              <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#115#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JsonMock.kt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/JsonMock.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+            <state relative-caret-position="1230">
+              <caret line="89" column="13" lean-forward="true" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -65,10 +74,10 @@
       <file leaf-file-name="JsonMockDispatcher.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/JsonMockDispatcher.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+            <state relative-caret-position="666">
+              <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
               <folding>
-                <element signature="e#40#252#0" expanded="true" />
+                <element signature="e#40#281#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,6 +91,15 @@
         <option value="Kotlin File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>logger.</find>
+      <find>dispath</find>
+      <find>log</find>
+      <find>dispatch</find>
+      <find>getLogger</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -356,32 +374,40 @@
         <option value="$PROJECT_DIR$/src/test/resources/test.json" />
         <option value="$PROJECT_DIR$/src/main/resources/users/1.json" />
         <option value="$PROJECT_DIR$/src/main/resources/users/2.json" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/JsonMock.kt" />
-        <option value="$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/JsonMockDispatcher.kt" />
         <option value="$PROJECT_DIR$/src/test/resources/users/GET_2.json.json" />
         <option value="$PROJECT_DIR$/src/main/resources/GET_users.json" />
         <option value="$PROJECT_DIR$/src/main/resources/users/GET_1.json" />
         <option value="$PROJECT_DIR$/src/test/resources/users/GET_1.json" />
         <option value="$PROJECT_DIR$/src/main/resources/users/POST_1.json" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/filesource/FileSource.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/filesource/ResponseSource.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/ResourceUtils.kt" />
+        <option value="$PROJECT_DIR$/src/test/resources/responses/users/GET_*.json" />
+        <option value="$PROJECT_DIR$/src/test/resources/responses/users/DELETE_1.json" />
+        <option value="$PROJECT_DIR$/src/test/resources/responses/users/GET_2*.json" />
+        <option value="$PROJECT_DIR$/src/test/resources/responses/users/GET_3*.json" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/JsonMockDispatcher.kt" />
+        <option value="$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/JsonMock.kt" />
         <option value="$PROJECT_DIR$/src/test/kotlin/TestMockServer.kt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="1920" />
-    <option name="y" value="-547" />
-    <option name="width" value="3008" />
-    <option name="height" value="1692" />
+    <option name="width" value="1920" />
+    <option name="height" value="1200" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -419,21 +445,6 @@
               <item name="ourjsonmockisbetter" type="b2602c69:ProjectViewProjectNode" />
               <item name="ourjsonmockisbetter" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ourjsonmockisbetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ourjsonmockisbetter" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ourjsonmockisbetter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ourjsonmockisbetter" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -456,6 +467,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="responses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ourjsonmockisbetter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ourjsonmockisbetter" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="responses" type="462c0819:PsiDirectoryNode" />
               <item name="users" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -466,7 +486,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -478,15 +497,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/test/resources/users" />
-      <recent name="$PROJECT_DIR$/src/main/resources/users" />
-      <recent name="$PROJECT_DIR$/src/test/resources" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/responses" />
       <recent name="$PROJECT_DIR$/src/test/resources/users" />
       <recent name="$PROJECT_DIR$/src/main" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/responses/users" />
+      <recent name="$PROJECT_DIR$/src/test/resources/users" />
+      <recent name="$PROJECT_DIR$/src/main/resources/users" />
+      <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -610,6 +631,23 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="TestMockServer.testWildcards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ourjsonmockisbetter_test" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestMockServer" />
+      <option name="METHOD_NAME" value="testWildcards" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -668,12 +706,14 @@
       <item itemvalue="JUnit.TestMockServer.test" />
       <item itemvalue="JUnit.TestMockServer.testUrlMatching" />
       <item itemvalue="JUnit.TestMockServer.testMethodMatching" />
+      <item itemvalue="JUnit.TestMockServer.testWildcards" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestMockServer" />
         <item itemvalue="JUnit.TestMockServer.testUrlMatching" />
         <item itemvalue="JUnit.TestMockServer.testMethodMatching" />
+        <item itemvalue="JUnit.TestMockServer.testWildcards" />
         <item itemvalue="JUnit.TestMockServer.test" />
       </list>
     </recent_temporary>
@@ -692,70 +732,70 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestMockServer_test - 2018.04.24 at 14h 04m 32s.xml">
-      <configuration name="TestMockServer.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestMockServer_test - 2018.04.24 at 14h 04m 36s.xml">
-      <configuration name="TestMockServer.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestMockServer_test - 2018.04.24 at 14h 05m 27s.xml">
-      <configuration name="TestMockServer.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestMockServer_test - 2018.04.24 at 14h 11m 03s.xml">
-      <configuration name="TestMockServer.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestMockServer_test - 2018.04.24 at 14h 11m 29s.xml">
-      <configuration name="TestMockServer.test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TestMockServer_testUrlMatching - 2018.04.24 at 14h 23m 31s.xml">
+    <history-entry file="TestMockServer_testUrlMatching - 2018.04.24 at 16h 13m 30s.xml">
       <configuration name="TestMockServer.testUrlMatching" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestMockServer_testUrlMatching - 2018.04.24 at 14h 25m 32s.xml">
+    <history-entry file="TestMockServer_testUrlMatching - 2018.04.24 at 16h 13m 48s.xml">
       <configuration name="TestMockServer.testUrlMatching" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestMockServer_testMethodMatching - 2018.04.24 at 14h 28m 34s.xml">
-      <configuration name="TestMockServer.testMethodMatching" configurationId="JUnit" />
+    <history-entry file="TestMockServer_testUrlMatching - 2018.04.24 at 16h 14m 43s.xml">
+      <configuration name="TestMockServer.testUrlMatching" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestMockServer_testMethodMatching - 2018.04.24 at 14h 29m 40s.xml">
-      <configuration name="TestMockServer.testMethodMatching" configurationId="JUnit" />
+    <history-entry file="TestMockServer_testUrlMatching - 2018.04.24 at 16h 17m 37s.xml">
+      <configuration name="TestMockServer.testUrlMatching" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestMockServer_testMethodMatching - 2018.04.24 at 14h 29m 56s.xml">
-      <configuration name="TestMockServer.testMethodMatching" configurationId="JUnit" />
+    <history-entry file="TestMockServer_testUrlMatching - 2018.04.24 at 16h 18m 26s.xml">
+      <configuration name="TestMockServer.testUrlMatching" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestMockServer_testUrlMatching - 2018.04.24 at 16h 18m 35s.xml">
+      <configuration name="TestMockServer.testUrlMatching" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestMockServer - 2018.04.24 at 16h 29m 38s.xml">
+      <configuration name="TestMockServer" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestMockServer - 2018.04.24 at 16h 34m 39s.xml">
+      <configuration name="TestMockServer" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestMockServer - 2018.04.24 at 16h 36m 22s.xml">
+      <configuration name="TestMockServer" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestMockServer - 2018.04.24 at 16h 37m 11s.xml">
+      <configuration name="TestMockServer" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="-547" width="3008" height="1692" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49946752" weight="0.32962275" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.4986514" weight="0.32962275" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5005325" side_tool="true" weight="0.32996973" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.33333334" side_tool="true" weight="0.51111114" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.20222634" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6666667" weight="0.42844445" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32962275" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32962275" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32962275" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16149697" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49946752" weight="0.32996973" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21565495" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962275" />
-      <window_info anchor="right" id="Gradle" order="3" visible="true" weight="0.32939985" />
+      <window_info anchor="right" id="Gradle" order="3" weight="0.32939985" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Niddler" order="7" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39950526" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.70500535" weight="0.39911112" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49946752" weight="0.32996973" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -763,7 +803,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/JsonMockDispatcher.kt</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="18" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -781,6 +829,30 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/test/kotlin/TestMockServer.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/JsonMock.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/JsonMockDispatcher.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#40#281#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -788,13 +860,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/icapps/ourjsonmockisbetter/JsonMock.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/icapps/ourjsonmockisbetter/JsonMock.kt" />
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -813,105 +879,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
           <caret line="181" column="11" selection-start-line="181" selection-start-column="11" selection-end-line="181" selection-end-column="11" />
-          <folding>
-            <element signature="e#5951#5952#0" expanded="true" />
-            <element signature="e#5996#5997#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/test.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/mockwebserver/3.10.0/c98940b01d29aaeefbdc1418b8671db2f5578fc9/mockwebserver-3.10.0-sources.jar!/okhttp3/mockwebserver/MockWebServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="403" selection-start-line="403" selection-end-line="403" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/JsonMockDispatcher.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <element signature="e#40#252#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/JsonMock.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/users/GET_2.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/users/GET_2.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="27" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/GET_users.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/users/GET_1.json.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/GET_users.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/users/GET_2.json.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/users/GET_2.json.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/users/GET_1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/users/GET_1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/users/POST_1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/users/POST_1.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/test.json" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/users/GET_2.json" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/GET_users.json" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/users/GET_1.json" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/users/POST_1.json" />
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -919,13 +894,130 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/users/GET_1?query=param.json" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/filesource/ResponseSource.kt" />
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/ResourceUtils.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="34" column="48" lean-forward="true" selection-start-line="34" selection-start-column="48" selection-end-line="34" selection-end-column="48" />
+          <folding>
+            <element signature="e#40#196#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.40/f30f4d822ac6c4ef7a72c86a11896aab1cdf3a2a/kotlin-stdlib-1.2.40-sources.jar!/kotlin/text/StringsJVM.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="335" column="24" selection-start-line="335" selection-start-column="24" selection-end-line="335" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/src.zip!/java/util/regex/Pattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="1289" column="25" selection-start-line="1289" selection-start-column="25" selection-end-line="1289" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/responses/users/GET_1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.40/f30f4d822ac6c4ef7a72c86a11896aab1cdf3a2a/kotlin-stdlib-1.2.40-sources.jar!/kotlin/text/Strings.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="372" column="18" selection-start-line="372" selection-start-column="18" selection-end-line="372" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.40/f30f4d822ac6c4ef7a72c86a11896aab1cdf3a2a/kotlin-stdlib-1.2.40-sources.jar!/kotlin/io/FileReadWrite.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="90" column="16" selection-start-line="90" selection-start-column="16" selection-end-line="90" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/responses/users/DELETE_1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="32" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/responses/users/GET_2.json.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/responses/GET_users.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.2.40/f30f4d822ac6c4ef7a72c86a11896aab1cdf3a2a/kotlin-stdlib-1.2.40-sources.jar!/kotlin/util/MathJVM.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="843" column="11" selection-start-line="843" selection-start-column="11" selection-end-line="843" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/mockwebserver/3.10.0/c98940b01d29aaeefbdc1418b8671db2f5578fc9/mockwebserver-3.10.0-sources.jar!/okhttp3/mockwebserver/MockWebServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="417" column="20" selection-start-line="417" selection-start-column="12" selection-end-line="417" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/src.zip!/java/util/logging/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="642" column="39" selection-start-line="642" selection-start-column="30" selection-end-line="642" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/JsonMock.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/kotlin/com/icapps/ourjsonmockisbetter/JsonMockDispatcher.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="e#40#281#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/responses/users/GET_3*.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/responses/users/GET_*.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/TestMockServer.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="62" column="47" selection-start-line="62" selection-start-column="47" selection-end-line="62" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#115#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1230">
+          <caret line="89" column="13" lean-forward="true" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1009,7 +1101,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>Gradle: com.squareup.okhttp3:mockwebserver:3.10.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
