@@ -1,6 +1,6 @@
 # MockingJ
-[![Release](https://jitpack.io/v/User/Repo.svg)]
-(https://jitpack.io/#User/Repo)
+[![Release](https://jitpack.io/v/maartenvang/MockingJ.svg)]
+(https://jitpack.io/#maartenvang/MockingJ)
 A simple wrapper around Square's [MockWebserver](https://github.com/square/okhttp/tree/master/mockwebserver) that allows you to mock API responses by placing JSON files in a certain file structure.
 
 ## Quick start
