@@ -1,9 +1,26 @@
 # MockingJ
-![Release](https://jitpack.io/v/maartenvang/MockingJ.svg)
+[![Release](https://jitpack.io/v/maartenvang/MockingJ.svg)](https://jitpack.io/#maartenvang/MockingJ)
 A simple wrapper around Square's [MockWebserver](https://github.com/square/okhttp/tree/master/mockwebserver) that allows you to mock API responses by placing JSON files in a certain file structure.
 
 ## Quick start
-Place your json files in your `resources` folder under `/responses` in the following structure:
+Add the MockingJ dependency:
+
+```
+allprojects {
+        repositories {
+            ...
+            maven { url 'https://jitpack.io' }
+        }
+    }
+```
+
+```
+dependencies {
+            compile 'com.github.maartenvang:MockingJ:0.0.1-alpha'
+    }
+```
+
+Place your API responses as json files in your `resources` folder under `/responses` in the following structure:
 ```
 src/test/resources/responses -- users.json
                              \_ users -- GET_1.json
