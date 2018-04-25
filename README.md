@@ -41,21 +41,21 @@ abstract class BaseNetworkMockedTest {
 
     @Before
     @CallSuper
-    open fun setup(){
+    open fun setup() {
         mockServer = MockingJServer()
         TestEnvironment.baseUrl = mockServer.start()
     }
 
     @After
     @CallSuper
-    open fun tearDown(){
+    open fun tearDown() {
         mockServer.stop()
     }
 
 }
 ```
 
-You can then use TestEnvironment.baseUrl as baseURL for your API calls. A
+You can then use `TestEnvironment.baseUrl` as baseURL for your API calls. A
 retrofit example with dagger2 could look like this:
 
 ```kotlin
