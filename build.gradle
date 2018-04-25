@@ -4,25 +4,110 @@ buildscript {
     repositories {
         mavenCentral()
         jcenter()
+        google()
     }
 
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools.build:gradle:3.1.2'
     }
 }
 
-group 'com.icapps.okhttpjsonmock'
+group 'com.icapps.mockingj'
 version '1.0-SNAPSHOT'
 
-apply plugin: 'java'
-apply plugin: 'kotlin'
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'maven-publish'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+}
 
 repositories {
+    mavenLocal()
     mavenCentral()
     jcenter()
+    google()
 }
 
 dependencies {
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    compile "com.squareup.okhttp3:mockwebserver:3.10.0"
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    api "com.squareup.okhttp3:mockwebserver:3.10.0"
+}
+
+task androidJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.getSrcDirs()
+}
+
+task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
+    classifier = 'javadoc'
+    from androidJavadocs.destinationDir
+}
+
+task sourceJar(type: Jar) {
+    from android.sourceSets.main.java.getSrcDirs()
+}
+
+def pomConfig = {
+    licenses {
+        license {
+            name "The Apache Software License, Version 2.0"
+            url "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            distribution "repo"
+        }
+    }
+    developers {
+        developer {
+            name "Maarten Van Giel"
+            email "contact@maarten.vg"
+            organization "icapps"
+        }
+    }
+}
+
+publishing {
+    repositories {
+        mavenLocal()
+    }
+    publications {
+        MyPublication(MavenPublication) {
+            artifact("$buildDir/outputs/aar/mockingj-release.aar")
+            artifact sourceJar {
+                classifier "sources"
+            }
+            artifact androidJavadocsJar
+            groupId "com.icapps.mockingj"
+            version "0.0.1-INTERNAL"
+            artifactId "mockingj"
+            pom.withXml {
+                def root = asNode()
+                root.appendNode('description', 'MockingJ JSON webserver')
+                root.appendNode('name', 'mockingj')
+                root.appendNode('url', 'https://github.com/icapps/mockingj')
+                root.children().last() + pomConfig
+
+                def dependenciesNode = root.appendNode('dependencies')
+
+                //Iterate over the compile dependencies (we don't want the test ones), adding a <dependency> node for each
+                configurations.api.allDependencies.each {
+                    if (it instanceof ExternalModuleDependency) {
+                        def dependencyNode = dependenciesNode.appendNode('dependency')
+                        dependencyNode.appendNode('groupId', it.group)
+                        dependencyNode.appendNode('artifactId', it.name)
+                        dependencyNode.appendNode('version', it.version)
+                    }
+                }
+                configurations.implementation.allDependencies.each {
+                    if (it instanceof ExternalModuleDependency) {
+                        def dependencyNode = dependenciesNode.appendNode('dependency')
+                        dependencyNode.appendNode('groupId', it.group)
+                        dependencyNode.appendNode('artifactId', it.name)
+                        dependencyNode.appendNode('version', it.version)
+                    }
+                }
+            }
+        }
+    }
 }

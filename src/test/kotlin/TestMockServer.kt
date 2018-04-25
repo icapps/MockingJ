@@ -1,4 +1,4 @@
-import com.icapps.ourjsonmockisbetter.JsonMock
+import com.icapps.mockingj.MockingJServer
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody
@@ -9,13 +9,13 @@ import org.junit.Test
 
 class TestMockServer {
 
-    private lateinit var server: JsonMock
+    private lateinit var server: MockingJServer
     private lateinit var okHttp: OkHttpClient
     private lateinit var baseUrl: String
 
     @Before
     fun setup() {
-        server = JsonMock()
+        server = MockingJServer()
         okHttp = OkHttpClient()
         baseUrl = server.start()
     }

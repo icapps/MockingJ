@@ -1,4 +1,4 @@
-package com.icapps.ourjsonmockisbetter
+package com.icapps.mockingj
 
 import java.io.File
 import java.io.IOException

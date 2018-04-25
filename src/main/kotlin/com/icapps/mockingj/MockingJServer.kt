@@ -1,11 +1,11 @@
-package com.icapps.ourjsonmockisbetter
+package com.icapps.mockingj
 
 import okhttp3.mockwebserver.MockWebServer
 
-class JsonMock {
+class MockingJServer {
 
     private val server = MockWebServer()
-    private val dispatcher = JsonMockDispatcher()
+    private val dispatcher = MockWebserverDispatcher()
 
     fun start(): String {
         server.setDispatcher(dispatcher)

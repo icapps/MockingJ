@@ -1,4 +1,4 @@
-package com.icapps.ourjsonmockisbetter
+package com.icapps.mockingj
 
 import okhttp3.mockwebserver.Dispatcher
 import okhttp3.mockwebserver.MockResponse
@@ -8,7 +8,7 @@ import java.nio.charset.Charset
 import java.util.logging.Logger
 import java.util.regex.Pattern
 
-class JsonMockDispatcher : Dispatcher() {
+class MockWebserverDispatcher : Dispatcher() {
 
     companion object {
         const val RESPONSES_DIRECTORY = "responses/"
@@ -25,7 +25,7 @@ class JsonMockDispatcher : Dispatcher() {
             MockResponse()
                     .setResponseCode(404)
         } else {
-            Logger.getLogger(JsonMockDispatcher::class.java.simpleName).info("Matched request $fileName with response ${matchedResponse.name}")
+            Logger.getLogger(MockWebserverDispatcher::class.java.simpleName).info("Matched request $fileName with response ${matchedResponse.name}")
 
             MockResponse()
                     .setResponseCode(200)
