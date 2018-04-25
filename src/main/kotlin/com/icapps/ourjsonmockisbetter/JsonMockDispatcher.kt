@@ -15,7 +15,7 @@ class JsonMockDispatcher : Dispatcher() {
     }
 
     private val responseFiles = ResourceUtils.getResourceListing(javaClass, RESPONSES_DIRECTORY)
-            .sortedBy { it.path.count { it == '*' } } // Least amount of wildcards go first
+            .sortedWith(compareBy({ it.path.count { it == '*' } }, { Int.MAX_VALUE - it.path.length })) // Least amount of wildcards and more specific matches go first
 
     override fun dispatch(request: RecordedRequest): MockResponse {
         val fileName = getFilenameForRequest(request)
@@ -25,7 +25,7 @@ class JsonMockDispatcher : Dispatcher() {
             MockResponse()
                     .setResponseCode(404)
         } else {
-            Logger.getLogger(JsonMockDispatcher::class.java.simpleName).info("Matched response ${matchedResponse.name}")
+            Logger.getLogger(JsonMockDispatcher::class.java.simpleName).info("Matched request $fileName with response ${matchedResponse.name}")
 
             MockResponse()
                     .setResponseCode(200)
