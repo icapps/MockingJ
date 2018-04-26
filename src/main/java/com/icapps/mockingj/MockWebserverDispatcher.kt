@@ -17,7 +17,7 @@ class MockWebserverDispatcher : Dispatcher() {
 
     private val gson = Gson()
 
-    private val responseFiles = ResourceUtils.getResourceListing(javaClass, RESPONSES_DIRECTORY)
+    private val responses = ResourceUtils.getResourceListing(javaClass, RESPONSES_DIRECTORY)
             .mapNotNull { parseMockResponse(it) }
             .sortedWith(compareBy({ it.fileName.count { it == '*' } }, { Int.MAX_VALUE - it.fileName.length })) // Least amount of wildcards and more specific matches go first
 
@@ -47,7 +47,7 @@ class MockWebserverDispatcher : Dispatcher() {
     }
 
     private fun findResponseFileForFilename(uri: String): MockingJResponse? {
-        return responseFiles.firstOrNull {
+        return responses.firstOrNull {
             val pattern = "(.*)${it.fileName.escapeForRegex()}".toRegex()
             uri.matches(pattern)
         }
