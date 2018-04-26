@@ -1,5 +1,12 @@
 {
+  "responseCode": 200,
+  "responseHeaders": {
+    "Content-Type": "application/json;charset=UTF-8",
+    "Date": "Mon, 08 Jan 2018 10:07:08 GMT"
+  },
+  "responseBody": {
     "id": 1,
     "firstName": "Maarten",
     "lastName": "Van Giel GET"
+  }
 }

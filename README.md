@@ -36,6 +36,21 @@ e.g. `GET http://example.com/users/3` will match with the file
 `responses/users/GET_*.JSON` but `GET http://example.com/users/2` will match
 `GET_2.json` because it has fewer wildcards.
 
+Each file should contain the desired response in the following format:
+```javascript
+{
+  "responseCode": 200,
+  "responseHeaders": {
+    ...
+  },
+  "responseBody": {
+    ...
+  }
+}
+```
+
+`responseCode` is required, `responseHeaders` and `responseBody` are optional. `responseBody` can either be a JSON object or an array.
+
 Starting the mock server is easy:
 ```kotlin
 val mockServer = MockingJServer()
