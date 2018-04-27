@@ -29,6 +29,7 @@ class MockingJServer private constructor(responseDirectory: String, overrideResp
         fun build(): MockingJServer {
             return MockingJServer(responseDirectory, overrideResponseDirectory)
         }
+
     }
 
     private val server = MockWebServer()

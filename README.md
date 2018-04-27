@@ -1,6 +1,9 @@
 # MockingJ
 [![Release](https://jitpack.io/v/maartenvang/MockingJ.svg)](https://jitpack.io/#maartenvang/MockingJ)
-A simple wrapper around Square's [MockWebserver](https://github.com/square/okhttp/tree/master/mockwebserver) that allows you to mock API responses by placing JSON files in a certain file structure.
+
+A wrapper around Square's [MockWebserver](https://github.com/square/okhttp/tree/master/mockwebserver) that allows you to mock API responses by placing JSON files in a certain file structure. This will actually spawn a http server, which allows you to test your application without having to mock your network layer. Just use the baseUrl provided by the `MockingJServer` (or `MockingJTestRule`) instead of your normal base URL.
+
+MockingJ comes with a JUnit TestRule (`MockingJTestRule`) and a `@MockResponses` annotation which allows for easy setup in your unit tests.
 
 ## Quick start
 Add the MockingJ dependency:
@@ -57,38 +60,34 @@ val mockServer = MockingJServer()
 val url = mockServer.start()
 ```
 
-## Example use case
-An example use case for MockingJ is simulating network traffic to an API in unit tests. A simple test setup could look like this:
-
-```kotlin
-object TestEnvironment {
-    var baseUrl: String? = null
-}
-```
+## Test example
+A simple test setup could look like this:
 
 ```kotlin
 @RunWith(JUnitRunner::class)
 abstract class BaseNetworkMockedTest {
 
-    private lateinit var mockServer: MockingJServer
+    @Rule
+    @JvmField
+    val rule = MockingJTestRule(mockAll = false) // if mockAll == true (default), responses will be mocked for all tests
 
-    @Before
-    @CallSuper
-    open fun setup() {
-        mockServer = MockingJServer()
-        TestEnvironment.baseUrl = mockServer.start()
+    @Test
+    @MockResponses()
+    fun testExample() {
+        // Responses from /src/test/resources/responses will be used
     }
 
-    @After
-    @CallSuper
-    open fun tearDown() {
-        mockServer.stop()
+    @Test
+    @MockResponses(overrideResponseDirectory = "responses-overridden")
+    fun testAnotherExample() {
+        /* Responses from /src/test/resources/responses-overridden will be used,
+           if no response was found responses from /src/test/resources/responses will be used as fallback */
     }
 
 }
 ```
 
-You can then use `TestEnvironment.baseUrl` as baseURL for your API calls. A
+You can then use `MockingJ.baseUrl` as baseURL for your API calls. A
 retrofit example with dagger2 could look like this:
 
 ```kotlin
@@ -99,7 +98,7 @@ class TestModule {
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-                .baseUrl(TestEnvironment.baseUrl ?: throw IllegalStateException("No valid baseURL available in testing environment"))
+                .baseUrl(MockingJ.baseUrl ?: throw IllegalStateException("No valid baseURL available in testing environment"))
                 .client(okHttpClient)
                 .build()
     }
@@ -112,5 +111,3 @@ class TestModule {
 
 }
 ```
-
-You can now inject your service wherever you want in your tests. The ExampleService will now work because it uses the baseUrl we have set in our `BaseNetworkMockedTest`!

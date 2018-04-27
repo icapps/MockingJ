@@ -1,5 +1,6 @@
 package com.icapps.mockingj.junit
 
+import com.icapps.mockingj.MockingJ
 import com.icapps.mockingj.MockingJServer
 import org.junit.rules.TestRule
 import org.junit.runner.Description
@@ -17,9 +18,6 @@ class MockingJTestRule(private val responseDirectory: String = DEFAULT_RESPONSE_
 
     private var mockServer: MockingJServer? = null
 
-    var baseUrl: String = ""
-        private set
-
     override fun apply(base: Statement, description: Description): Statement {
         val builder = MockingJServer.Builder()
 
@@ -33,7 +31,7 @@ class MockingJTestRule(private val responseDirectory: String = DEFAULT_RESPONSE_
                     .responseDirectory(responseDirectory)
                     .build()
                     .apply {
-                        baseUrl = start()
+                        MockingJ.baseUrl = start()
                     }
         }
 
@@ -43,6 +41,7 @@ class MockingJTestRule(private val responseDirectory: String = DEFAULT_RESPONSE_
                     base.evaluate()
                 } finally {
                     mockServer?.stop()
+                    MockingJ.baseUrl = null
                 }
             }
         }
