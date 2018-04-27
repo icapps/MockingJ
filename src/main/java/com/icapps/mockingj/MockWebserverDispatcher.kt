@@ -9,21 +9,26 @@ import java.io.File
 import java.util.logging.Logger
 import java.util.regex.Pattern
 
-class MockWebserverDispatcher : Dispatcher() {
 
-    companion object {
-        const val RESPONSES_DIRECTORY = "responses/"
-    }
+class MockWebserverDispatcher(private val responseDirectory: String, private val overrideResponseDirectory: String?) : Dispatcher() {
 
     private val gson = Gson()
 
-    private val responses = ResourceUtils.getResourceListing(javaClass, RESPONSES_DIRECTORY)
-            .mapNotNull { parseMockResponse(it) }
+    private val responses = FileUtils.listFileTree(File("src/test/resources/$responseDirectory"))
+            .mapNotNull { parseMockResponse(it, isOverride = false) }
             .sortedWith(compareBy({ it.fileName.count { it == '*' } }, { Int.MAX_VALUE - it.fileName.length })) // Least amount of wildcards and more specific matches go first
+
+    private val overrideResponses = if (overrideResponseDirectory == null)
+        null
+    else
+        FileUtils.listFileTree(File("src/test/resources/$overrideResponseDirectory"))
+                .mapNotNull { parseMockResponse(it, isOverride = true) }
+                .sortedWith(compareBy({ it.fileName.count { it == '*' } }, { Int.MAX_VALUE - it.fileName.length })) // Least amount of wildcards and more specific matches go first
+
 
     override fun dispatch(request: RecordedRequest): MockResponse {
         val fileName = getFilenameForRequest(request)
-        val matchedResponse = findResponseFileForFilename(fileName)
+        val matchedResponse = findResponseFileForFilename(overrideResponses, fileName) ?: findResponseFileForFilename(responses, fileName)
 
         return if (matchedResponse == null) {
             MockResponse()
@@ -46,8 +51,8 @@ class MockWebserverDispatcher : Dispatcher() {
         return "$resultFilename.json"
     }
 
-    private fun findResponseFileForFilename(uri: String): MockingJResponse? {
-        return responses.firstOrNull {
+    private fun findResponseFileForFilename(responses: Collection<MockingJResponse>?, uri: String): MockingJResponse? {
+        return responses?.firstOrNull {
             val pattern = "(.*)${it.fileName.escapeForRegex()}".toRegex()
             uri.matches(pattern)
         }
@@ -63,9 +68,12 @@ class MockWebserverDispatcher : Dispatcher() {
         return replaceRange(indexOfLast, indexOfLast + last.length, replacement)
     }
 
-    private fun parseMockResponse(file: File): MockingJResponse? {
-        val fileName = file.path.substringAfter(RESPONSES_DIRECTORY)
-        return gson.fromJson(file.reader(), MockingJResponse::class.java).apply { this.fileName = fileName }
+    private fun parseMockResponse(file: File, isOverride: Boolean): MockingJResponse? {
+        val fileName = file.path.substringAfter(if (isOverride) "/$overrideResponseDirectory" else "/$responseDirectory")
+        return gson.fromJson(file.reader(), MockingJResponse::class.java).apply {
+            this.fileName = fileName
+            this.isOverride = isOverride
+        }
     }
 
 }

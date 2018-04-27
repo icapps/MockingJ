@@ -1,28 +1,21 @@
-import com.icapps.mockingj.MockingJServer
-import okhttp3.OkHttpClient
-import okhttp3.Request
+
+import com.icapps.mockingj.junit.MockResponses
+import com.icapps.mockingj.junit.MockingJTestRule
 import okhttp3.RequestBody
-import org.junit.After
-import org.junit.Assert.fail
-import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 
-class TestMockServer {
+class TestMockServer : BaseTest() {
 
-    private lateinit var server: MockingJServer
-    private lateinit var okHttp: OkHttpClient
     private lateinit var baseUrl: String
 
-    @Before
-    fun setup() {
-        server = MockingJServer()
-        okHttp = OkHttpClient()
-        baseUrl = server.start()
-    }
+    @Rule
+    @JvmField
+    val mockingJRule = MockingJTestRule()
 
-    @After
-    fun tearDown() {
-        server.stop()
+    override fun setup() {
+        super.setup()
+        baseUrl = mockingJRule.baseUrl
     }
 
     @Test
@@ -56,39 +49,9 @@ class TestMockServer {
         assert(body5 == body6)
     }
 
-    fun getResponse(url: String): String {
-        val response = okHttp.newCall(Request.Builder()
-                .url(url)
-                .get()
-                .build()).execute()
-
-        val body = response.body()?.string()
-        if (!response.isSuccessful || body == null) {
-            fail("No body received or not successful for url $url")
-            throw IllegalStateException()
-        } else {
-            return body
-        }
-    }
-
     @Test
     fun testMethodMatching() {
         val url = "${baseUrl}users/1"
-
-        fun getResponse(url: String, method: String, requestBody: RequestBody? = null): String {
-            val response = okHttp.newCall(Request.Builder()
-                    .url(url)
-                    .method(method, requestBody)
-                    .build()).execute()
-
-            val body = response.body()?.string()
-            if (body == null) {
-                fail()
-                throw IllegalStateException("No body received for url $url")
-            } else {
-                return body
-            }
-        }
 
         val getBody = getResponse(url, "GET")
         assert(getBody.contains("Van Giel GET"))
@@ -116,6 +79,15 @@ class TestMockServer {
         val body3 = getResponse(url3)
         assert(body3.contains("Verbeeck GET"))
         assert(!body2.contains("Van Giel GET"))
+    }
+
+    @Test
+    @MockResponses("responses-overridden")
+    fun testOverride() {
+        val url = "${baseUrl}users/1"
+        val body = getResponse(url)
+        assert(body.contains("Vermeulen GET"))
+        assert(!body.contains("Van Giel"))
     }
 
 }
