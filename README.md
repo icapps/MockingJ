@@ -68,7 +68,7 @@ A simple test setup could look like this:
 
 ```kotlin
 @RunWith(JUnitRunner::class)
-abstract class BaseNetworkMockedTest {
+class ExampleTest {
 
     @Rule
     @JvmField
