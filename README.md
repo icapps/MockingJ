@@ -5,6 +5,9 @@ A wrapper around Square's [MockWebserver](https://github.com/square/okhttp/tree/
 
 MockingJ comes with a JUnit TestRule (`MockingJTestRule`) and a `@MockResponses` annotation which allows for easy setup in your unit tests.
 
+Please note that this library is experimental. It works, but it's still under development and may undergo breaking changes. Response matching is also very crude and probably not very
+ reliable at the moment.
+
 ## Quick start
 Add the MockingJ dependency:
 
