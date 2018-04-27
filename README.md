@@ -72,7 +72,7 @@ class ExampleTest {
 
     @Rule
     @JvmField
-    val rule = MockingJTestRule(mockAll = false) // if mockAll == true (default), responses will be mocked for all tests
+    val rule = MockingJTestRule(mockAll = false) // if mockAll == true (default), responses will be mocked for all tests without requiring a @MockResponses annotation
 
     @Test
     @MockResponses()
