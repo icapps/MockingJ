@@ -22,7 +22,7 @@ allprojects {
 
 ```
 dependencies {
-            compile 'com.github.maartenvang:MockingJ:0.0.1-alpha'
+            compile 'com.github.maartenvang:MockingJ:0.0.1-alpha2'
     }
 ```
 
