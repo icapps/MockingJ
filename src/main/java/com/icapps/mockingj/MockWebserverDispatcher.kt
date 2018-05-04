@@ -28,7 +28,8 @@ class MockWebserverDispatcher(private val responseDirectory: String, private val
 
     override fun dispatch(request: RecordedRequest): MockResponse {
         val fileName = getFilenameForRequest(request)
-        val matchedResponse = findResponseFileForFilename(overrideResponses, fileName) ?: findResponseFileForFilename(responses, fileName)
+        val matchedResponse = findResponseFileForFilename(overrideResponses, fileName)
+                ?: findResponseFileForFilename(responses, fileName)
 
         return if (matchedResponse == null) {
             MockResponse()
@@ -47,7 +48,7 @@ class MockWebserverDispatcher(private val responseDirectory: String, private val
     }
 
     private fun getFilenameForRequest(request: RecordedRequest): String {
-        val resultFilename = request.path.replaceLast("/", "/${request.method}_")
+        val resultFilename = request.path.trimEnd('/').replaceLast("/", "/${request.method}_")
         return "$resultFilename.json"
     }
 
