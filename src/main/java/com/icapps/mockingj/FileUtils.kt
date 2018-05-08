@@ -7,14 +7,18 @@ object FileUtils {
 
     fun listFileTree(dir: File?): Collection<File> {
         val fileTree = HashSet<File>()
-        if (dir?.listFiles() == null) {
-            return fileTree
-        }
-        for (entry in dir.listFiles()!!) {
-            if (entry.isFile)
+
+        val files = dir?.listFiles() ?: return fileTree
+
+        for (entry in files) {
+            if (entry.isHidden)
+                continue
+
+            if (entry.isFile) {
                 fileTree.add(entry)
-            else
+            } else {
                 fileTree.addAll(listFileTree(entry))
+            }
         }
         return fileTree
     }

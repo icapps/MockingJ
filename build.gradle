@@ -11,8 +11,11 @@ buildscript {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
+plugins {
+    id "com.jfrog.bintray" version "1.7.3"
+}
 
-def artifactVersion = '0.0.2'
+def artifactVersion = '0.0.3'
 def artifactGroup = 'com.icapps.mockingj'
 def artifactName = "mockingj"
 group "$artifactGroup"
@@ -87,4 +90,22 @@ publishing {
             }
         }
     }
+}
+
+bintray {
+    user = System.getenv('BINTRAY_USER_ICAPPS')
+    key = System.getenv('BINTRAY_KEY_ICAPPS')
+    pkg {
+        repo = 'maven'
+        name = 'mockingj'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/icapps/MockingJ'
+
+        version {
+            name = "$artifactVersion"
+            desc = "Utility library for easily creating a json-based mocked web api"
+            released = new Date()
+        }
+    }
+    publications = ['maven']
 }
