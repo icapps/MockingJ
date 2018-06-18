@@ -63,6 +63,8 @@ val mockServer = MockingJServer()
 val url = mockServer.start()
 ```
 
+Note that if you use the test rule, starting your own server is not necessary.
+
 ## Test example
 A simple test setup could look like this:
 
